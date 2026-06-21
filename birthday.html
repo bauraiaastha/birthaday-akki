@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Akkiiiii ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    text-align:center;
+    overflow-y:auto;
+    padding:40px 0;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+    width:90%;
+    max-width:700px;
+    box-shadow:0 0 30px rgba(255,255,255,0.1);
+    animation:float 3s ease-in-out infinite;
+    margin:30px 0;
+}
+
+h1{
+    font-size:2.5rem;
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+h2{
+    color:#f472b6;
+    margin-bottom:20px;
+}
+
+.gallery{
+    margin:20px 0;
+}
+
+.gallery img{
+    width:280px;
+    height:380px;
+    object-fit:cover;
+    border-radius:20px;
+    border:3px solid white;
+    box-shadow:0 0 20px rgba(255,255,255,0.3);
+}
+
+.travel{
+    color:#fbbf24;
+    margin-bottom:20px;
+    font-style:italic;
+}
+
+p{
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    background:white;
+}
+
+#wish{
+    margin-top:15px;
+    color:#fbabd4;
+    font-size:1.2rem;
+}
+
+.code{
+    margin-top:20px;
+    background:#111827;
+    padding:15px;
+    border-radius:12px;
+    text-align:left;
+    color:#22c55e;
+    overflow:auto;
+}
+
+.emoji{
+    position:absolute;
+    font-size:2rem;
+    animation:fall 8s linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-100px);
+    }
+    to{
+        transform:translateY(120vh);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="emoji" style="left:10%;animation-delay:0s;">🎈</div>
+<div class="emoji" style="left:25%;animation-delay:2s;">🎂</div>
+<div class="emoji" style="left:45%;animation-delay:4s;">🎉</div>
+<div class="emoji" style="left:65%;animation-delay:1s;">💖</div>
+<div class="emoji" style="left:85%;animation-delay:3s;">🥳</div>
+
+<div class="card">
+
+<h1>Happy Birthday 🎂</h1>
+
+<h2>Akkiiiiii 💖</h2>
+
+<div class="gallery">
+    <img id="photo" src="images/pic1.jpeg" alt="Akkiiiiii">
+</div>
+
+<p class="travel">
+✈️ Collecting memories, one destination at a time.
+</p>
+
+<p>
+I hope this year takes you to places you've been dreaming of,
+whether it's a random café in a new city, a mountain view that leaves you speechless,
+or a sunset you'll want to stay in forever. 🌍✨
+
+<br><br>
+
+May your camera roll be full of memories,
+your passport collect stamps,
+your playlists hit harder on long drives,
+and your life be filled with people and moments that feel like home. 🤍
+
+<br><br>
+
+Here's to spontaneous plans,
+missed turns that become adventures,
+and a year that feels as beautiful as those golden-hour skies we all secretly chase. 🌅
+
+<br><br>
+
+And of course... the dresses? WOW. 👑😭
+
+<br><br>
+
+Stay pretty,
+stay kind,
+stay a little delulu,
+and keep collecting stories worth telling. 💌
+
+<br><br>
+
+Have the happiest birthday, birthday girl. 🫶🎀
+</p>
+
+<button onclick="showWish()">
+Click For Surprise 🎁
+</button>
+
+<p id="wish"></p>
+
+<div class="code">
+<pre>
+while(life){
+    happiness++;
+    success++;
+    adventures++;
+    stress = 0;
+    dreams = achieved;
+}
+
+System.out.println(
+"Happy Birthday Akkiiiiii ❤️"
+);
+</pre>
+</div>
+
+</div>
+
+<script>
+
+const photos = [
+    "images/pic1.jpeg",
+    "images/pic2.jpeg",
+    "images/pic3.jpeg",
+    "images/pic4.jpeg",
+    "images/pic5.jpeg"
+];
+
+let current = 0;
+
+setInterval(() => {
+    current = (current + 1) % photos.length;
+    document.getElementById("photo").src = photos[current];
+}, 2500);
+
+function showWish(){
+    document.getElementById("wish").innerHTML =
+    "💖 To more adventures, prettier sunsets, endless memories, and all the happiness your heart can hold. Happy Birthday Akkiiiiii! ✨🎂🌍";
+}
+
+</script>
+
+</body>
+</html>
